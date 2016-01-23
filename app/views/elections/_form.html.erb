@@ -1,0 +1,131 @@
+	<%= form_for(@election) do |f| %>
+	  <% if @election.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@election.errors.count, "error") %> prohibited this election from being saved:</h2>
+	
+	      <ul>
+	      <% @election.errors.full_messages.each do |message| %>
+	        <li><%= message %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+	<div class="ui segment">
+	  <h2 class="ui green right ribbon massive label">Personal Information</h2>
+	  <div class="ui clearing divider"></div>
+	  <div class="field ui fluid icon input">
+		    <%= f.label :first_name %><br>
+		    <%= f.text_field :first_name %>
+		  </div>
+		  <div class="field ui fluid icon input">
+		    <%= f.label :last_name %><br>
+		    <%= f.text_field :last_name %>
+		  </div>
+	</div>
+	<div class="ui segment">
+	  <h2 class="ui blue right ribbon massive label">Democrate Candidate</h2>
+	  <div class="ui clearing divider"></div>
+	  <div class="ui three column doubling stackable grid container">
+		  <div class="column">
+			  <div class="field">
+			  	<%= f.check_box :hillary_clinton, :class => "ui tag blue" %>
+			    <%= f.label :hillary_clinton %>
+			  </div>
+		  </div>
+		  <div class="column">
+			  <div class="field">
+			  	<%= f.check_box :martin_omalley %>
+			    <%= f.label :martin_omalley %>
+			  </div>
+		  </div>
+		  <div class="column">
+			  <div class="field">
+			  	<%= f.check_box :bernie_sanders %>
+			    <%= f.label :bernie_sanders %> 
+			  </div>
+		  </div>
+	  	</div>
+	  </div>
+	  <div class="ui horizontal divider">
+    	Or
+  	  </div>
+  	  <div class="ui segment">
+	  <h2 class="ui red right ribbon massive label">Republican Candidate</h2>
+	  <div class="ui clearing divider"></div>
+  	  	<div class="ui three column doubling stackable grid container">
+		  <div class="column">
+		  <div class="field">
+		  	<%= f.check_box :jeb_bush %>
+		    <%= f.label :jeb_bush %>
+		  </div>
+		  </div>
+		  <div class="column">
+		  <div class="field">
+		  	<%= f.check_box :ben_carson %>
+		    <%= f.label :ben_carson %>  
+		  </div>
+		  </div>
+		  <div class="column">
+		  <div class="field">
+		  	<%= f.check_box :chris_christie %>
+		    <%= f.label :chris_christie %>
+		  </div>
+		  </div>
+		  <div class="column">
+		  <div class="field">
+		  	<%= f.check_box :ted_cruz %>
+		    <%= f.label :ted_cruz %>
+		  </div>
+		  </div>
+		  <div class="column">
+		  <div class="field">
+		  	<%= f.check_box :carly_fiorina %>
+		    <%= f.label :carly_fiorina %>
+		  </div>
+		  </div>
+		  <div class="column">
+		  <div class="field">
+		  	<%= f.check_box :mike_huckabee %>
+		    <%= f.label :mike_huckabee %>
+		  </div>
+		  </div>
+		  <div class="column">
+		  <div class="field">
+		  	<%= f.check_box :john_kasich %>
+		    <%= f.label :john_kasich %>
+		  </div>
+		  </div>
+		  <div class="column">
+		  <div class="field">
+		  	<%= f.check_box :rand_paul %>
+		    <%= f.label :rand_paul %>
+		  </div>
+		  </div>
+		  <div class="column">
+		  <div class="field">
+		  	<%= f.check_box :marco_rubio %>
+		    <%= f.label :marco_rubio %>
+		  </div>
+		  </div>
+		  <div class="column">
+		  <div class="field">
+		  	<%= f.check_box :rick_santorum %>
+		    <%= f.label :rick_santorum %>
+		  </div>
+		  </div>
+		  <div class="column">
+		  <div class="field">
+		  	<%= f.check_box :donald_trump %>
+		    <%= f.label :donald_trump %>
+		  </div>
+		  </div>
+	  	</div>
+	  </div>
+	  
+	  <div class="ui buttons">
+  		 <%= link_to 'Back' , elections_path , :class => "ui button"%>	
+  			<div class="or"></div>
+  		<%= f.submit :class => "ui primary button"%>
+	  </div> 
+  
+<% end %>

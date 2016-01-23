@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  hillary_clinton: false
+  martin_omalley: false
+  bernie_sanders: false
+  jeb_bush: false
+  ben_carson: false
+  chris_christie: false
+  ted_cruz: false
+  carly_fiorina: false
+  mike_huckabee: false
+  john_kasich: false
+  rand_paul: false
+  marco_rubio: false
+  rick_santorum: false
+  donald_trump: false
+
+two:
+  first_name: MyString
+  last_name: MyString
+  hillary_clinton: false
+  martin_omalley: false
+  bernie_sanders: false
+  jeb_bush: false
+  ben_carson: false
+  chris_christie: false
+  ted_cruz: false
+  carly_fiorina: false
+  mike_huckabee: false
+  john_kasich: false
+  rand_paul: false
+  marco_rubio: false
+  rick_santorum: false
+  donald_trump: false

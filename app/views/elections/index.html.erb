@@ -1,55 +1,112 @@
-<h1>Listing elections</h1>
+<h1 class="ui teal ribbon massive label">Listing elections</h1>
 
-<table>
+<table class="ui celled table">
   <thead>
-    <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Hillary clinton</th>
-      <th>Martin omalley</th>
-      <th>Bernie sanders</th>
-      <th>Jeb bush</th>
-      <th>Ben carson</th>
-      <th>Chris christie</th>
-      <th>Ted cruz</th>
-      <th>Carly fiorina</th>
-      <th>Mike huckabee</th>
-      <th>John kasich</th>
-      <th>Rand paul</th>
-      <th>Marco rubio</th>
-      <th>Rick santorum</th>
-      <th>Donald trump</th>
-      <th colspan="3"></th>
-    </tr>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Hillary Clinton</th>
+    <th>Martin O'malley</th>
+    <th>Bernie Sanders</th>
+    <th>Jeb Bush</th>
+    <th>Ben Carson</th>
+    <th>Chris Christie</th>
+    <th>Ted Cruz</th>
+    <th>Carly Fiorina</th>
+    <th>Mike Huckabee</th>
+    <th>John Kasich</th>
+    <th>Rand Paul</th>
+    <th>Marco Rubio</th>
+    <th>Rick Santorum</th>
+    <th>Donald Trump</th>
+    <th colspan="3">Actions</th>
+  </tr>
   </thead>
 
   <tbody>
-    <% @elections.each do |election| %>
+  <% @elections.each do |election| %>
       <tr>
         <td><%= election.first_name %></td>
         <td><%= election.last_name %></td>
-        <td><%= election.hillary_clinton %></td>
-        <td><%= election.martin_omalley %></td>
-        <td><%= election.bernie_sanders %></td>
-        <td><%= election.jeb_bush %></td>
-        <td><%= election.ben_carson %></td>
-        <td><%= election.chris_christie %></td>
-        <td><%= election.ted_cruz %></td>
-        <td><%= election.carly_fiorina %></td>
-        <td><%= election.mike_huckabee %></td>
-        <td><%= election.john_kasich %></td>
-        <td><%= election.rand_paul %></td>
-        <td><%= election.marco_rubio %></td>
-        <td><%= election.rick_santorum %></td>
-        <td><%= election.donald_trump %></td>
+        <td>
+          <% if election.hillary_clinton? %>
+              <i class="large green checkmark icon"></i>
+          <% end %>
+        </td>
+        <td class="center aligned">
+          <% if election.martin_omalley? %>
+              <i class="large green checkmark icon"></i>
+          <% end %>
+        </td>
+        <td class="center aligned">
+          <% if election.bernie_sanders? %>
+              <i class="large green checkmark icon"></i>
+          <% end %>
+        </td>
+        <td class="center aligned">
+          <% if election.jeb_bush? %>
+              <i class="large green checkmark icon"></i>
+          <% end %>
+        </td>
+        <td class="center aligned">
+          <% if election.ben_carson? %>
+              <i class="large green checkmark icon"></i>
+          <% end %>
+        </td>
+        <td class="center aligned">
+          <% if election.chris_christie? %>
+              <i class="large green checkmark icon"></i>
+          <% end %>
+        </td>
+        <td class="center aligned">
+          <% if election.ted_cruz? %>
+              <i class="large green checkmark icon"></i>
+          <% end %>
+        </td>
+        <td class="center aligned">
+          <% if election.carly_fiorina? %>
+              <i class="large green checkmark icon"></i>
+          <% end %>
+        </td>
+        <td class="center aligned">
+          <% if election.mike_huckabee? %>
+              <i class="large green checkmark icon"></i>
+          <% end %>
+        </td>
+        <td class="center aligned">
+          <% if election.john_kasich? %>
+              <i class="large green checkmark icon"></i>
+          <% end %>
+        </td>
+        <td class="center aligned">
+          <% if election.rand_paul? %>
+              <i class="large green checkmark icon"></i>
+          <% end %>
+        </td>
+        <td class="center aligned">
+          <% if election.marco_rubio? %>
+              <i class="large green checkmark icon"></i>
+          <% end %>
+        </td>
+        <td class="center aligned">
+          <% if election.rick_santorum? %>
+              <i class="large green checkmark icon"></i>
+          <% end %>
+        </td>
+        <td class="center aligned">
+          <% if election.donald_trump? %>
+              <i class="large green checkmark icon"></i>
+          <% end %>
+        </td>
         <td><%= link_to 'Show', election %></td>
         <td><%= link_to 'Edit', edit_election_path(election) %></td>
-        <td><%= link_to 'Destroy', election, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', election, method: :delete, data: {confirm: 'Are you sure?'} %></td>
       </tr>
-    <% end %>
+  <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Election', new_election_path %>
+<div class="ui buttons">
+  <%= link_to 'New Election' , new_election_path, :class => 'ui primary button' %>
+</div>

@@ -1,0 +1,23 @@
+<h1 class="ui teal ribbon massive label">Results</h1>
+
+<table class="ui definition table">
+  <tdbody>
+    <% @map.each do |name, result| %>
+        <tr >
+          <td class="two wide column"><%= name %></td>
+          <td>
+            <div class="ui teal progress" data-percent="<%= result %>">
+              <div class="bar">
+                <div class="progress"></div>
+              </div>
+            </div>
+
+          </td>
+        </tr>
+    <% end %>
+
+  </tdbody>
+</table>
+
+
+

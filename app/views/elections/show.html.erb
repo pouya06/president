@@ -1,84 +1,120 @@
-<p id="notice"><%= notice %></p>
+<% if flash[:notice] %>
+    <div class="ui green message" id="notice"><%= notice %></div>
+<% end %>
+<table class="ui definition table">
+  <tdbody>
+    <tr>
+      <td class="two wide column">First name:</td>
+      <td><%= @election.first_name %></td>
+    </tr>
 
-<p>
-  <strong>First name:</strong>
-  <%= @election.first_name %>
-</p>
+    <tr>
+      <td>Last name:</td>
+      <td><%= @election.last_name %></td>
+    </tr>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @election.last_name %>
-</p>
+    <p>
+      <% if @election.hillary_clinton? %>
+        <td>Hillary clinton:</td>
+        <td><i class="large green checkmark icon"></i></td>
+    <% end %>
+    </p>
 
-<p>
-  <strong>Hillary clinton:</strong>
-  <%= @election.hillary_clinton %>
-</p>
+    <p>
+      <% if @election.martin_omalley? %>
+        <td>Martin omalley:</td>
+        <td><i class="large green checkmark icon"></i></td>
+    <% end %>
+    </p>
 
-<p>
-  <strong>Martin omalley:</strong>
-  <%= @election.martin_omalley %>
-</p>
+    <p>
+      <% if @election.bernie_sanders? %>
+        <td>Bernie sanders:</td>
+        <td><i class="large green checkmark icon"></i></td>
+    <% end %>
+    </p>
 
-<p>
-  <strong>Bernie sanders:</strong>
-  <%= @election.bernie_sanders %>
-</p>
+    <p>
+      <% if @election.jeb_bush? %>
+        <td>Jeb bush:</td>
+        <td><i class="large green checkmark icon"></i></td>
+    <% end %>
+    </p>
 
-<p>
-  <strong>Jeb bush:</strong>
-  <%= @election.jeb_bush %>
-</p>
+    <p>
+      <% if @election.ben_carson? %>
+        <td>Ben carson:</td>
+        <td><i class="large green checkmark icon"></i></td>
+    <% end %>
+    </p>
 
-<p>
-  <strong>Ben carson:</strong>
-  <%= @election.ben_carson %>
-</p>
+    <p>
+      <% if @election.chris_christie? %>
+        <td>Chris christie:</td>
+        <td><i class="large green checkmark icon"></i></td>
+    <% end %>
+    </p>
 
-<p>
-  <strong>Chris christie:</strong>
-  <%= @election.chris_christie %>
-</p>
+    <p>
+      <% if @election.ted_cruz? %>
+        <td>Ted cruz:</td>
+        <td><i class="large green checkmark icon"></i></td>
+    <% end %>
+    </p>
 
-<p>
-  <strong>Ted cruz:</strong>
-  <%= @election.ted_cruz %>
-</p>
+    <p>
+      <% if @election.carly_fiorina? %>
+        <td>Carly fiorina:</td>
+        <td><i class="large green checkmark icon"></i></td>
+    <% end %>
+    </p>
 
-<p>
-  <strong>Carly fiorina:</strong>
-  <%= @election.carly_fiorina %>
-</p>
+    <p>
+      <% if @election.mike_huckabee? %>
+        <td>Mike huckabee:</td>
+        <td><i class="large green checkmark icon"></i></td>
+    <% end %>
+    </p>
 
-<p>
-  <strong>Mike huckabee:</strong>
-  <%= @election.mike_huckabee %>
-</p>
+    <p>
+      <% if @election.john_kasich? %>
+        <td>John kasich:</td>
+        <td><i class="large green checkmark icon"></i></td>
+    <% end %>
+    </p>
 
-<p>
-  <strong>John kasich:</strong>
-  <%= @election.john_kasich %>
-</p>
+    <p>
+      <% if @election.rand_paul? %>
+        <td>Rand paul:</td>
+        <td><i class="large green checkmark icon"></i></td>
+    <% end %>
+    </p>
 
-<p>
-  <strong>Rand paul:</strong>
-  <%= @election.rand_paul %>
-</p>
+    <p>
+      <% if @election.marco_rubio? %>
+        <td>Marco rubio:</td>
+        <td><i class="large green checkmark icon"></i></td>
+    <% end %>
+    </p>
 
-<p>
-  <strong>Marco rubio:</strong>
-  <%= @election.marco_rubio %>
-</p>
+    <p>
+      <% if @election.rick_santorum? %>
+        <td>Rick santorum:</td>
+        <td><i class="large green checkmark icon"></i></td>
+    <% end %>
+    </p>
 
-<p>
-  <strong>Rick santorum:</strong>
-  <%= @election.rick_santorum %>
-</p>
+    <p>
+      <% if @election.donald_trump? %>
+        <td>Donald trump:</td>
+        <td><i class="large green checkmark icon"></i></td>
+    <% end %>
+    </p>
+  </tdbody>
+</table>
 
-<p>
-  <strong>Donald trump:</strong>
-  <%= @election.donald_trump %>
-</p>
-
-<%= link_to 'Edit', edit_election_path(@election) %> |
-<%= link_to 'Back', elections_path %>
+<div class="ui buttons">
+  <%= link_to 'Back', elections_path, :class => 'ui button' %>
+  <div class="or"></div>
+  <%= link_to 'Edit', edit_election_path(@election), :class => 'ui primary button' %>
+</div>

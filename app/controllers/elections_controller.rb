@@ -9,12 +9,12 @@ class ElectionsController < ApplicationController
 
 
   def result
-    @map = {}
-    @total = Election.count(:first_name)
-    %w{Hillary_clinton martin_omalley bernie_sanders jeb_bush ben_carson chris_christie ted_cruz carly_fiorina mike_huckabee john_kasich rand_paul marco_rubio rick_santorum donald_trump}.each do |candidate|
-      @map[candidate] = (((Election.where(candidate => true).count).to_f / @total.to_f) * 100).round
-    end
-
+    # @map = {}
+    # @total = Election.count(:first_name)
+    # %w{Hillary_clinton martin_omalley bernie_sanders jeb_bush ben_carson chris_christie ted_cruz carly_fiorina mike_huckabee john_kasich rand_paul marco_rubio rick_santorum donald_trump}.each do |candidate|
+    #   @map[candidate] = (((Election.where(candidate => true).count).to_f / @total.to_f) * 100).round
+    # end
+    @map = Election.name_and_count_of_candidates
   end
 
   # GET /elections/1

@@ -19,7 +19,7 @@
     <th>Marco Rubio</th>
     <th>Rick Santorum</th>
     <th>Donald Trump</th>
-    <th colspan="3">Actions</th>
+    <!--<th colspan="3">Actions</th>-->
   </tr>
   </thead>
 
@@ -98,15 +98,41 @@
               <i class="large green checkmark icon"></i>
           <% end %>
         </td>
-        <td><%= link_to 'Show', election %></td>
-        <td><%= link_to 'Edit', edit_election_path(election) %></td>
-        <td><%= link_to 'Destroy', election, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        <!--<td><%= link_to 'Show', election %></td>-->
+        <!--<td><%= link_to 'Edit', edit_election_path(election) %></td>-->
+        <!--<td><%= link_to 'Destroy', election, method: :delete, data: {confirm: 'Are you sure?'} %></td>-->
       </tr>
   <% end %>
   </tbody>
+
+  <tfoot>
+  <% if (@elections.count % 10) >= 1 then %>
+      <% @pages = (@elections.count / 10) %>
+  <% else %>
+      <% @pages = (@elections.count / 10) - 1 %>
+  <% end %>
+  <tr>
+    <th colspan="16">
+      <div class="ui right floated pagination menu">
+        <a class="icon item">
+          <i class="left chevron icon"></i>
+        </a>
+        <% (0..@pages).each do |item| %>
+            <a class="item"><%= item+1 %></a>
+        <% end %>
+        <a class="icon item">
+          <i class="right chevron icon"></i>
+        </a>
+      </div>
+    </th>
+  </tr>
+  </tfoot>
 </table>
 
 <br>
-<div class="ui buttons">
-  <%= link_to 'New Election' , new_election_path, :class => 'ui primary button' %>
-</div>
+<%= link_to 'New Election', new_election_path, :class => 'ui primary button left floated' %>
+<%= link_to 'Results', 'elections/result', :class => 'ui right floated green button' %>
+
+<br>
+<br>
+<br>

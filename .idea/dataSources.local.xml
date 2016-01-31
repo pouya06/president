@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails president: test" uuid="69dd57d1-78eb-4bd2-9f52-c4fc6d53fa65">
+      <schema-pattern>db_test_postgresql.*</schema-pattern>
+      <default-schemas>db_test_postgresql.*</default-schemas>
+    </data-source>
+    <data-source name="Rails president: development" uuid="bfa99301-fd43-4e10-82cd-bf980b777f4e">
+      <schema-pattern>db_development_postgresql.*</schema-pattern>
+      <default-schemas>db_development_postgresql.*</default-schemas>
+    </data-source>
+    <data-source name="Rails president: production" uuid="db2ea8ac-83a9-412b-bcbd-5be11eb4d9e2">
+      <schema-pattern>db_production_postgresql.*</schema-pattern>
+      <default-schemas>db_production_postgresql.*</default-schemas>
+    </data-source>
+  </component>
+</project>

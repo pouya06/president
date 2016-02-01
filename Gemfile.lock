@@ -53,6 +53,7 @@ GEM
     minitest (5.8.3)
     multi_json (1.11.2)
     pg (0.18.4)
+    puma (2.16.0)
     rack (1.5.5)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -114,6 +115,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   pg (= 0.18.4)
+  puma
   rails (= 4.1.10)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

@@ -1,0 +1,23 @@
+/*  Place all the behaviors and hooks related to the matching controller here.
+    All this logic will automatically be available in application.js.
+    You can use CoffeeScript in this file: http://coffeescript.org/ */
+$('.progress').progress();
+
+//$('.ui.modal').modal('hide');
+
+var youtubeURL = null;
+
+$('label').click(function() {
+    $('.ui.modal').modal('show');
+    console.log($(this));
+    $('#youtube-link')[0].innerText = getYoutubeLink($(this)[0].innerText);
+});
+
+function getYoutubeLink(candidateName) {
+    if(candidateName === 'Hillary clinton') {
+        return "http://youtube.com/pouya<%= ENV["foo"]%>";
+    }
+
+    return null;
+}
+

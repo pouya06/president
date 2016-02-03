@@ -13,103 +13,104 @@
       <td><%= @election.last_name %></td>
     </tr>
 
-    <p>
-      <% if @election.hillary_clinton? %>
-        <td>Hillary clinton:</td>
-        <td><i class="large green checkmark icon"></i></td>
+    <% if @election.hillary_clinton? %>
+        <tr>
+          <td>Hillary clinton:</td>
+          <td><i class="large green checkmark icon"></i></td>
+        </tr>
     <% end %>
-    </p>
 
-    <p>
-      <% if @election.martin_omalley? %>
-        <td>Martin omalley:</td>
-        <td><i class="large green checkmark icon"></i></td>
-    <% end %>
-    </p>
 
-    <p>
-      <% if @election.bernie_sanders? %>
-        <td>Bernie sanders:</td>
-        <td><i class="large green checkmark icon"></i></td>
+    <% if @election.martin_omalley? %>
+        <tr>
+          <td>Martin omalley:</td>
+          <td><i class="large green checkmark icon"></i></td>
+        </tr>
     <% end %>
-    </p>
 
-    <p>
-      <% if @election.jeb_bush? %>
-        <td>Jeb bush:</td>
-        <td><i class="large green checkmark icon"></i></td>
+    <% if @election.bernie_sanders? %>
+        <tr>
+          <td>Bernie sanders:</td>
+          <td><i class="large green checkmark icon"></i></td>
+        </tr>
     <% end %>
-    </p>
 
-    <p>
-      <% if @election.ben_carson? %>
-        <td>Ben carson:</td>
-        <td><i class="large green checkmark icon"></i></td>
+    <% if @election.jeb_bush? %>
+        <tr>
+          <td>Jeb bush:</td>
+          <td><i class="large green checkmark icon"></i></td>
+        </tr>
     <% end %>
-    </p>
 
-    <p>
-      <% if @election.chris_christie? %>
-        <td>Chris christie:</td>
-        <td><i class="large green checkmark icon"></i></td>
+    <% if @election.ben_carson? %>
+        <tr>
+          <td>Ben carson:</td>
+          <td><i class="large green checkmark icon"></i></td>
+        </tr>
     <% end %>
-    </p>
 
-    <p>
-      <% if @election.ted_cruz? %>
-        <td>Ted cruz:</td>
-        <td><i class="large green checkmark icon"></i></td>
+    <% if @election.chris_christie? %>
+        <tr>
+          <td>Chris christie:</td>
+          <td><i class="large green checkmark icon"></i></td>
+        </tr>
     <% end %>
-    </p>
 
-    <p>
-      <% if @election.carly_fiorina? %>
-        <td>Carly fiorina:</td>
-        <td><i class="large green checkmark icon"></i></td>
+    <% if @election.ted_cruz? %>
+        <tr>
+          <td>Ted cruz:</td>
+          <td><i class="large green checkmark icon"></i></td>
+        </tr>
     <% end %>
-    </p>
 
-    <p>
-      <% if @election.mike_huckabee? %>
-        <td>Mike huckabee:</td>
-        <td><i class="large green checkmark icon"></i></td>
+    <% if @election.carly_fiorina? %>
+        <tr>
+          <td>Carly fiorina:</td>
+          <td><i class="large green checkmark icon"></i></td>
+        </tr>
     <% end %>
-    </p>
 
-    <p>
-      <% if @election.john_kasich? %>
-        <td>John kasich:</td>
-        <td><i class="large green checkmark icon"></i></td>
+    <% if @election.mike_huckabee? %>
+        <tr>
+          <td>Mike huckabee:</td>
+          <td><i class="large green checkmark icon"></i></td>
+        </tr>
     <% end %>
-    </p>
 
-    <p>
-      <% if @election.rand_paul? %>
-        <td>Rand paul:</td>
-        <td><i class="large green checkmark icon"></i></td>
+    <% if @election.john_kasich? %>
+        <tr>
+          <td>John kasich:</td>
+          <td><i class="large green checkmark icon"></i></td>
+        </tr>
     <% end %>
-    </p>
 
-    <p>
-      <% if @election.marco_rubio? %>
-        <td>Marco rubio:</td>
-        <td><i class="large green checkmark icon"></i></td>
+    <% if @election.rand_paul? %>
+        <tr>
+          <td>Rand paul:</td>
+          <td><i class="large green checkmark icon"></i></td>
+        </tr>
     <% end %>
-    </p>
 
-    <p>
-      <% if @election.rick_santorum? %>
-        <td>Rick santorum:</td>
-        <td><i class="large green checkmark icon"></i></td>
+    <% if @election.marco_rubio? %>
+        <tr>
+          <td>Marco rubio:</td>
+          <td><i class="large green checkmark icon"></i></td>
+        </tr>
     <% end %>
-    </p>
 
-    <p>
-      <% if @election.donald_trump? %>
-        <td>Donald trump:</td>
-        <td><i class="large green checkmark icon"></i></td>
+    <% if @election.rick_santorum? %>
+        <tr>
+          <td>Rick santorum:</td>
+          <td><i class="large green checkmark icon"></i></td>
+        </tr>
     <% end %>
-    </p>
+
+    <% if @election.donald_trump? %>
+        <tr>
+          <td>Donald trump:</td>
+          <td><i class="large green checkmark icon"></i></td>
+        </tr>
+    <% end %>
   </tdbody>
 </table>
 

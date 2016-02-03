@@ -24,7 +24,6 @@ class ElectionsController < ApplicationController
 
   # GET /elections/new
   def new
-    ENV["foo"] = "bar"
     @election = Election.new
   end
 
